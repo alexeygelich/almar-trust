@@ -1,4 +1,4 @@
-import "./main-98f9d5fe.js";
+import "./main-ac7ca425.js";
 simpleslider.getSlider({
   container: document.getElementById("my_slider_left"),
   prop: "opacity",
