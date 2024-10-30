@@ -21,11 +21,11 @@ export default defineConfig({
       },
     }),
     {
-      ...imagemin(["./src/img/**/*.{jpg,png,jpeg}"], {
-        destination: "./src/img/webp/",
-        plugins: [imageminWebp({ quality: 86 })],
-      }),
-      apply: "serve",
+      // ...imagemin(["./public/img/**/*.{jpg,png,jpeg}"], {
+      //   destination: "./public/img/webp/",
+      //   plugins: [imageminWebp({ quality: 86 })],
+      // }),
+      // apply: "serve",
     },
   ],
   build: {
@@ -40,9 +40,9 @@ export default defineConfig({
           ])
       ),
       // output unminified CSS file
-      output: {
-        assetFileNames: "assets/[name].[ext]",
-      },
+      // output: {
+      //   assetFileNames: "assets/[name].[ext]",
+      // },
     },
   },
 });
