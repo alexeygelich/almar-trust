@@ -1,0 +1,447 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.11 (last updated 20.9.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+      text-size-adjust: none;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::-webkit-input-placeholder {
+  color: unset;
+}
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
+::-ms-input-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+.mt_30 {
+  margin-top: 30px;
+}
+
+.mb_30 {
+  margin-bottom: 30px;
+}
+
+.pt_350 {
+  padding-top: 350px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.red_border {
+  border: 1px solid red;
+}
+
+.gallery_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+.text_center {
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url("/almar-trust/assets/pageglare.png") center top no-repeat, url("/almar-trust/assets/main_bg.jpeg");
+  color: #FFF;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-flow: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+     -moz-box-flex: 1;
+          flex: 1 0 auto;
+}
+
+.main_about {
+  padding-top: 300px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 320px;
+}
+
+.header_btn {
+  width: 152px;
+  height: 32px;
+}
+
+.home_btn {
+  background: url("/almar-trust/assets/home_btn.jpeg");
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
+.about_us_btn {
+  background: url("/almar-trust/assets/about_us_btn.jpeg");
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
+.hero {
+  padding-top: 350px;
+}
+
+.wrapper_slider {
+  border: 1px solid red;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.slider_link {
+  display: inline-block;
+}
+
+.slider_img {
+  width: 100%;
+}
+
+.slider_label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  color: #FFFFFF;
+  z-index: 10;
+}
+
+.top_sliders {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.slider_top {
+  width: 420px;
+  height: 250px;
+}
+
+.slider_bottom {
+  height: 250px;
+  width: 320px;
+}
+
+.article {
+  margin: 30px 0 100px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.text {
+  font-size: 19px;
+  line-height: 1.21;
+  text-align: justify;
+  text-indent: 50px;
+  margin-top: 13px;
+}
+
+footer {
+  padding: 40px;
+}
+
+.copyright {
+  font-size: 13px;
+  line-height: 1.77;
+  color: rgb(166, 166, 166);
+}
+
+.contacts_btn {
+  position: fixed;
+  left: -316px;
+  top: 45%;
+  z-index: 999;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  transition: 300ms;
+}
+.contacts_btn:hover {
+  -webkit-transform: translateX(316px);
+     -moz-transform: translateX(316px);
+      -ms-transform: translateX(316px);
+          transform: translateX(316px);
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  transition: 300ms;
+}
+
+.send_msg {
+  position: fixed;
+  right: -300px;
+  top: 45%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  gap: 5px;
+  z-index: 999;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  transition: 300ms;
+}
+.send_msg:hover {
+  -webkit-transform: translateX(-300px);
+     -moz-transform: translateX(-300px);
+      -ms-transform: translateX(-300px);
+          transform: translateX(-300px);
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  transition: 300ms;
+}
+
+.form_msg {
+  width: 296px;
+  height: 368px;
+  padding: 40px 15px 30px;
+  background: url("/almar-trust/assets/form_bg.png");
+}
+
+.form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  gap: 15px;
+}
+.form input, .form textarea {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #B9C2CB;
+  -webkit-box-shadow: 0 0 10px rgba(192, 192, 192, 0.7) inset, 0px 0px 7px rgba(192, 192, 192, 0.7);
+          box-shadow: 0 0 10px rgba(192, 192, 192, 0.7) inset, 0px 0px 7px rgba(192, 192, 192, 0.7);
+  color: #3D5166;
+  background: #F9FAFB;
+  font-size: 13px;
+}
+.form button {
+  border-radius: 2px;
+  border: 1px solid black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: rgb(239, 239, 239);
+  padding: 3px;
+  margin: 0 auto;
+  font-size: 13px;
+  color: #505050;
+}
+
+.wrapper_links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.wrapper_links a {
+  border: 1px solid red;
+}
+
+.gallery_title {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.gallery_label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px){
+  .container {
+    width: 730px;
+  }
+  .slider_bottom {
+    width: 730px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .container {
+    width: 900px;
+  }
+  .slider_bottom {
+    width: 870px;
+  }
+}
