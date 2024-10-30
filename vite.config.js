@@ -41,7 +41,7 @@ export default defineConfig({
       ),
       // output unminified CSS file
       output: {
-        assetFileNames: "assets/[name].[ext]",
+        assetFileNames: "src/img/[name].[ext]",
       },
     },
   },
