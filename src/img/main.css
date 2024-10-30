@@ -180,7 +180,7 @@ img {
 
 body {
   font-family: Arial, sans-serif;
-  background: url("/almar-trust/assets/pageglare.png") center top no-repeat, url("/almar-trust/assets/main_bg.jpeg");
+  background: url("/almar-trust/src/img/pageglare.png") center top no-repeat, url("/almar-trust/src/img/main_bg.jpeg");
   color: #FFF;
   min-height: 100vh;
   display: -webkit-box;
@@ -218,13 +218,13 @@ main {
 }
 
 .home_btn {
-  background: url("/almar-trust/assets/home_btn.jpeg");
+  background: url("/almar-trust/src/img/home_btn.jpeg");
   -webkit-background-size: contain;
           background-size: contain;
 }
 
 .about_us_btn {
-  background: url("/almar-trust/assets/about_us_btn.jpeg");
+  background: url("/almar-trust/src/img/about_us_btn.jpeg");
   -webkit-background-size: contain;
           background-size: contain;
 }
@@ -361,7 +361,7 @@ footer {
   width: 296px;
   height: 368px;
   padding: 40px 15px 30px;
-  background: url("/almar-trust/assets/form_bg.png");
+  background: url("/almar-trust/src/img/form_bg.png");
 }
 
 .form {
