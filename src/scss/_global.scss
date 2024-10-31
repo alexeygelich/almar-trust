@@ -36,3 +36,11 @@ img {
 .text_center {
   text-align: center;
 }
+
+.list {
+  list-style: inside;
+
+  & li {
+    padding-top: 5px;
+  }
+}

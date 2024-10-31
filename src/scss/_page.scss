@@ -18,7 +18,7 @@ main {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 320px;
+  width: 80%;
 
   @media screen and (min-width: 768px) {
     width: 730px;
@@ -45,7 +45,7 @@ main {
 }
 
 .hero {
-  padding-top: 350px;
+    padding-top: 350px;
 }
 
 .wrapper_slider {
@@ -59,7 +59,9 @@ main {
 }
 
 .slider_img {
-  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
 }
 
 .slider_label {
@@ -75,22 +77,42 @@ main {
 
 .top_sliders {
   display: flex;
-  justify-content: space-between;
-
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
 }
 
 .slider_top {
-  width: 420px;
-  height: 250px;
+  height: 225px;
+  width: 300px;
+
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    height: 250px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 420px;
+    height: 250px;
+  }
+}
+
+.wrapper_bottom_slider {
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .slider_bottom {
-  height: 250px;
-  width: 320px;
+  height: 225px;
+  width: 300px;
 
   @media screen and (min-width: 768px) {
-    width: 730px;
+    width: 700px;
   }
 
   @media screen and (min-width: 1200px) {
