@@ -178,6 +178,13 @@ img {
   text-align: center;
 }
 
+.list {
+  list-style: inside;
+}
+.list li {
+  padding-top: 5px;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: url("/almar-trust/assets/pageglare-5d7e64b0.png") center top no-repeat, url("/almar-trust/assets/main_bg-344387e1.jpeg");
@@ -209,7 +216,7 @@ main {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 320px;
+  width: 80%;
 }
 
 .header_btn {
@@ -245,10 +252,6 @@ main {
   display: inline-block;
 }
 
-.slider_img {
-  width: 100%;
-}
-
 .slider_label {
   position: absolute;
   bottom: 0;
@@ -265,21 +268,31 @@ main {
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  gap: 15px;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .slider_top {
-  width: 420px;
-  height: 250px;
+  height: 225px;
+  width: 300px;
+}
+
+.wrapper_bottom_slider {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .slider_bottom {
-  height: 250px;
-  width: 320px;
+  height: 225px;
+  width: 300px;
 }
 
 .article {
@@ -432,14 +445,31 @@ footer {
   .container {
     width: 730px;
   }
+  .slider_img {
+    width: 100%;
+  }
+  .top_sliders {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+            justify-content: space-between;
+  }
+  .slider_top {
+    width: 340px;
+    height: 250px;
+  }
   .slider_bottom {
-    width: 730px;
+    width: 700px;
   }
 }
 
 @media screen and (min-width: 1200px){
   .container {
     width: 900px;
+  }
+  .slider_top {
+    width: 420px;
+    height: 250px;
   }
   .slider_bottom {
     width: 870px;
