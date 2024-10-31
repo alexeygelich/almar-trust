@@ -1,4 +1,5 @@
 import "./main-be19b5a2.js";
+import "./fslightbox-ae972863.js";
 simpleslider.getSlider({
   container: document.getElementById("my_slider_left"),
   prop: "opacity",
