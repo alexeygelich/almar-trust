@@ -30,8 +30,13 @@ main {
 }
 
 .header_btn {
-  width: 152px;
-  height: 32px;
+  width: 110px;
+  height: 23px;
+
+  @media screen and (min-width: 480px) {
+    width: 152px;
+    height: 32px;
+  }
 }
 
 .home_btn {
@@ -217,11 +222,18 @@ footer {
 
 .wrapper_links {
   display: flex;
+
   align-items: center;
+  justify-content: center;
   gap: 15px;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 
   & a {
     border: 1px solid red;
+    max-width: 400px;
   }
 }
 
