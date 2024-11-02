@@ -121,8 +121,8 @@ main {
 
   @media screen and (max-width: 430px) {
     & a {
-      width: 45%;
-      min-width: 120px;
+      width: 132.5px;
+      //min-width: 120px;
     }
   }
 
@@ -158,7 +158,7 @@ main {
 }
 
 .slider_top {
-  width: 250px;
+  width: 280px;
   height: 225px;
 
   @media screen and (min-width: 430px) {
@@ -183,7 +183,7 @@ main {
 
 .slider_bottom {
   height: 225px;
-  width: 250px;
+  width: 280px;
 
   @media screen and (min-width: 430px) {
     height: 225px;
