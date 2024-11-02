@@ -1,4 +1,4 @@
-import "./main-b122d11a.js";
+import "./main-07ca4dcb.js";
 import "./fslightbox-ae972863.js";
 simpleslider.getSlider({
   container: document.getElementById("my_slider_left"),

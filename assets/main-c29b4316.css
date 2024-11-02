@@ -336,7 +336,7 @@ main {
 }
 
 .slider_top {
-  width: 250px;
+  width: 280px;
   height: 225px;
 }
 
@@ -349,7 +349,7 @@ main {
 
 .slider_bottom {
   height: 225px;
-  width: 250px;
+  width: 280px;
 }
 
 .article {
@@ -708,7 +708,6 @@ footer {
 
 @media screen and (max-width: 430px){
   .top_video_gallery a {
-    width: 45%;
-    min-width: 120px;
+    width: 132.5px;
   }
 }
