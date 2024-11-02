@@ -1,10 +1,14 @@
 body {
   font-family: Arial, sans-serif;
-  background: url("../img/pageglare.png") center top no-repeat, url("../img/main_bg.jpeg");
+  background: url("../img/bg_mob.png") center top no-repeat, url("../img/main_bg.jpeg");
   color: #FFF;
   min-height: 100vh;
   display: flex;
   flex-flow: column;
+
+  @media screen and (min-width: 768px) {
+    background: url("../img/pageglare.png") center top no-repeat, url("../img/main_bg.jpeg");
+  }
 }
 
 main {
@@ -30,12 +34,38 @@ main {
 }
 
 .header_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #92420f;
+  background: #c9c9dd;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
   width: 110px;
   height: 23px;
+
+  &:hover {
+    box-shadow: 0px 0px 3px 1px rgba(252,252,252,1);
+  }
+
+  & svg {
+    width: 18px;
+    height: 18px;
+  }
 
   @media screen and (min-width: 480px) {
     width: 152px;
     height: 32px;
+
+    font-size: 18px;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
@@ -50,7 +80,15 @@ main {
 }
 
 .hero {
+    padding-top: 285px;
+
+  @media screen and (min-width: 768px){
+    padding-top: 300px;
+  }
+
+  @media screen and (min-width: 1200px){
     padding-top: 350px;
+  }
 }
 
 .wrapper_slider {
@@ -78,8 +116,21 @@ main {
   margin-top: 15px;
 
   & img {
-    width: 141px;
     height: 141px;
+  }
+
+  @media screen and (max-width: 430px) {
+    & a {
+      width: 45%;
+      min-width: 120px;
+    }
+  }
+
+  @media screen and (min-width: 430px) {
+    & img {
+      width: 141px;
+      height: 141px;
+    }
   }
 }
 
@@ -107,8 +158,12 @@ main {
 }
 
 .slider_top {
+  width: 250px;
   height: 225px;
-  width: 300px;
+
+  @media screen and (min-width: 430px) {
+    width: 300px;
+  }
 
   @media screen and (min-width: 768px) {
     width: 340px;
@@ -128,7 +183,12 @@ main {
 
 .slider_bottom {
   height: 225px;
-  width: 300px;
+  width: 250px;
+
+  @media screen and (min-width: 430px) {
+    height: 225px;
+    width: 300px;
+  }
 
   @media screen and (min-width: 768px) {
     width: 700px;
@@ -144,18 +204,38 @@ main {
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
+  text-indent: 25px;
   line-height: 1;
-}
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+  }
+  }
 
 .text {
-  font-size: 19px;
+  font-size: 15px;
   line-height: 1.21;
   text-align: justify;
-  text-indent: 50px;
+  text-indent: 25px;
 
   margin-top: 13px;
+
+  @media screen and (min-width: 768px){
+    font-size: 17px;
+    text-indent: 35px;
+  }
+
+  @media screen and (min-width: 1200px){
+    font-size: 19px;
+    text-indent: 50px;
+  }
 }
 
 footer {
@@ -171,7 +251,7 @@ footer {
 .contacts_btn {
   position: fixed;
   left: -316px;
-  top: 45%;
+  top: 30%;
   z-index: 999;
   transition: 300ms;
 
@@ -183,8 +263,8 @@ footer {
 
 .send_msg {
   position: fixed;
-  right: -300px;
-  top: 45%;
+  right: -290px;
+  top: 26%;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -193,16 +273,91 @@ footer {
   transition: 300ms;
 
   &:hover {
-    transform: translateX(-300px);
+    transform: translateX(-290px);
     transition: 300ms;
   }
 }
 
+.send_msg_new {
+  position: fixed;
+  left: -300px;
+  top: 30%;
+
+  padding: 20px;
+  background: #B9C2CB;
+  border-radius: 5px;
+
+  z-index: 999;
+  transition: 300ms;
+
+  &:hover {
+    transform: translateX(300px);
+    transition: 300ms;
+  }
+}
+
+.contacts_item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+
+  border-top: dashed 2px #ddd9d9;
+
+  & li {
+    color: #92420f;
+  }
+  & a {
+    color: #92420f;
+  }
+}
+
+.contact_title {
+  font-size: 16px;
+  color: #92420f;
+  text-align: center;
+}
+
+.contact_label {
+  position: absolute;
+  top: 130px;
+  right: -122px;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ec6e15;
+  color: black;
+  font-size: 20px;
+  border-radius: 4px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.send_msg_label {
+  position: absolute;
+  top: 160px;
+  left: -123px;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ec6e15;
+  color: black;
+  font-size: 20px;
+  border-radius: 4px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
 .form_msg {
-  width: 296px;
-  height: 368px;
+  width: 290px;
+  height: 365px;
   padding: 40px 15px 30px;
-  background: url("../img/form_bg.png");
+  border-radius: 5px;
+  background: url("../img/form_bg.png") center center;
 }
 
 .form {
